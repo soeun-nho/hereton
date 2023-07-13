@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {{place.name}}
+    {{place.total_score}}
+    {{place1.light}}
+    {{place1.crowd}}
+    {{place1.street}}
+
+    {% for place1 in place %}
+    <a href="{% url 'detail'%}">{{place1.writer}}</a>
+    {{place1.textreview}}
+    {% endfor %}
+
+
+
+</body>
+
+</html>

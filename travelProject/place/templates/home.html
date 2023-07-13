@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href=" {% url 'light' %}"> 주변이 밝은 거리 </a>
+    {% if place.total_score>=4 %}
+    {{return red_icon}}
+
+    <a href=" {% url 'crowd' %}"> 사람 많은 거리 </a>
+
+    <a href=" {% url 'street' %}"> 정돈된 거리 </a>
+
+    <a href=" {% url 'list' %}"> 장소 1</a>
+</body>
+
+</html>
