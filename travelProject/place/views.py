@@ -70,5 +70,3 @@ def street_safety(request):
 def detail_review(request):
     return render(request, 'detail_review.html')
 
-def login(request):
-    return render(request, 'login.html')
