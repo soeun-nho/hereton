@@ -24,13 +24,16 @@ def select(request):
     return render(request, 'select.html')
 
 def store_safety_comment(request):
-    return render(request, 'store_safety_comment.html')
+    return render(request, 'store-safety-comment.html')
 
 def store_safety(request):
-    return render(request, 'store_safety.html')
+    return render(request, 'store-safety.html')
 
 def street_safety_comment(request):
-    return render(request, 'street_safety_comment.html')
+    return render(request, 'street-safety-comment.html')
 
 def street_safety(request):
-    return render(request, 'street_safety.html')
+    return render(request, 'street-safety.html')
+
+def detail_review(request):
+    return render(request, 'detail_review.html')
