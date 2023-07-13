@@ -61,3 +61,13 @@ from django.db import models
 
 #     def get_absolute_url(self):
 #         return reverse('place:place_detail', args=[self.id, self.slug])
+
+
+class Review(models.Model):
+    content = models.CharField(verbose_name="텍스트리뷰", max_length=128)
+    light = models.IntegerField(null=True)
+    people = models.IntegerField(null=True)
+    clear = models.IntegerField(null=True)
+
+    def __str__(self): 
+        return self.content

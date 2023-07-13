@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-# from .models import
+from .models import Review
 # from .forms import ReviewForm
 
 # def review_new(request):
@@ -30,7 +30,22 @@ def store_safety(request):
     return render(request, 'store-safety.html')
 
 def street_safety_comment(request):
-    return render(request, 'street-safety-comment.html')
+    if request.method =='POST':
+        content = request.POST.get('content')
+        Review.objects.create(
+            content= content,
+        )
+        return redirect('street_safety_comment')
+    else:
+        light = request.GET.get('light')
+        people = request.GET.get('people')
+        clear = request.GET.get('clear')
+        Review.objects.create(
+            light=light,
+            people=people,
+            clear=clear
+        )
+        return render(request, 'street-safety-comment.html')
 
 def street_safety(request):
     return render(request, 'street-safety.html')

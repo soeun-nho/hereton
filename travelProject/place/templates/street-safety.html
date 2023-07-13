@@ -24,125 +24,126 @@
         <span class="street_place">미국 뉴욕 브루클린</span>
     </div>
 
-    <div class="question_part">
-        <div class="question">
-            <div class="question_1">
-                <img src=" {% static 'images/street_question_1.svg' %}" class="street_question_1">
-                <div class="q1_rating">
-                    <fieldset class="rating_1">
-                        <input type="radio" id="star5" name="rating_1" value="5" /><label for="star5" class="full"
-                            title="Awesome"></label>
-                        <input type="radio" id="star4.5" name="rating_1" value="4.5" /><label for="star4.5"
-                            class="half"></label>
-                        <input type="radio" id="star4" name="rating_1" value="4" /><label for="star4"
-                            class="full"></label>
-                        <input type="radio" id="star3.5" name="rating_1" value="3.5" /><label for="star3.5"
-                            class="half"></label>
-                        <input type="radio" id="star3" name="rating_1" value="3" /><label for="star3"
-                            class="full"></label>
-                        <input type="radio" id="star2.5" name="rating_1" value="2.5" /><label for="star2.5"
-                            class="half"></label>
-                        <input type="radio" id="star2" name="rating_1" value="2" /><label for="star2"
-                            class="full"></label>
-                        <input type="radio" id="star1.5" name="rating_1" value="1.5" /><label for="star1.5"
-                            class="half"></label>
-                        <input type="radio" id="star1" name="rating_1" value="1" /><label for="star1"
-                            class="full"></label>
-                        <input type="radio" id="star0.5" name="rating_1" value="0.5" /><label for="star0.5"
-                            class="half"></label>
-                    </fieldset>
-                </div>
-                <div class="q1_pn">
-                    <img src="{% static 'images/negative.svg' %}" class="q1_negative">
-                    <div class="q1_score">
-                        <span class="score_1" id="rating-value_1">0.0</span>
-                        <span class="full_score">/5</span>
+    <form action="{% url 'street_safety_comment' %}" method="get">
+        <div class="question_part">
+            <div class="question">
+                <div class="question_1">
+                    <img src=" {% static 'images/street_question_1.svg' %}" class="street_question_1">
+                    <div class="q1_rating">
+                        <fieldset class="rating_1">
+                            <input type="radio" id="star5" name="rating_1" value="5" /><label for="star5" class="full"
+                                title="Awesome"></label>
+                            <input type="radio" id="star4.5" name="rating_1" value="4.5" /><label for="star4.5"
+                                class="half"></label>
+                            <input type="radio" id="star4" name="rating_1" value="4" /><label for="star4"
+                                class="full"></label>
+                            <input type="radio" id="star3.5" name="rating_1" value="3.5" /><label for="star3.5"
+                                class="half"></label>
+                            <input type="radio" id="star3" name="rating_1" value="3" /><label for="star3"
+                                class="full"></label>
+                            <input type="radio" id="star2.5" name="rating_1" value="2.5" /><label for="star2.5"
+                                class="half"></label>
+                            <input type="radio" id="star2" name="rating_1" value="2" /><label for="star2"
+                                class="full"></label>
+                            <input type="radio" id="star1.5" name="rating_1" value="1.5" /><label for="star1.5"
+                                class="half"></label>
+                            <input type="radio" id="star1" name="rating_1" value="1" /><label for="star1"
+                                class="full"></label>
+                            <input type="radio" id="star0.5" name="rating_1" value="0.5" /><label for="star0.5"
+                                class="half"></label>
+                        </fieldset>
                     </div>
-                    <img src=" {% static 'images/positive.svg' %}" class="q1_positive">
-                </div>
-            </div>
-
-            <div class="question_2">
-                <img src=" {% static 'images/street_question_2.svg' %}" class="street_question_2">
-                <div class="q2_rating">
-                    <fieldset class="rating_2">
-                        <input type="radio" id="star5_2" name="rating_2" value="5" /><label for="star5_2" class="full"
-                            title="Awesome"></label>
-                        <input type="radio" id="star4.5_2" name="rating_2" value="4.5" /><label for="star4.5_2"
-                            class="half"></label>
-                        <input type="radio" id="star4_2" name="rating_2" value="4" /><label for="star4_2"
-                            class="full"></label>
-                        <input type="radio" id="star3.5_2" name="rating_2" value="3.5" /><label for="star3.5_2"
-                            class="half"></label>
-                        <input type="radio" id="star3_2" name="rating_2" value="3" /><label for="star3_2"
-                            class="full"></label>
-                        <input type="radio" id="star2.5_2" name="rating_2" value="2.5" /><label for="star2.5_2"
-                            class="half"></label>
-                        <input type="radio" id="star2_2" name="rating_2" value="2" /><label for="star2_2"
-                            class="full"></label>
-                        <input type="radio" id="star1.5_2" name="rating_2" value="1.5" /><label for="star1.5_2"
-                            class="half"></label>
-                        <input type="radio" id="star1_2" name="rating_2" value="1" /><label for="star1_2"
-                            class="full"></label>
-                        <input type="radio" id="star0.5_2" name="rating_2" value="0.5" /><label for="star0.5_2"
-                            class="half"></label>
-                    </fieldset>
-                </div>
-                <div class="q2_pn">
-                    <img src=" {% static 'images/negative.svg' %}" class="q2_negative">
-                    <div class="q2_score">
-                        <span class="score_2" id="rating-value_2">0.0</span>
-                        <span class="full_score">/5</span>
+                    <div class="q1_pn">
+                        <img src="{% static 'images/negative.svg' %}" class="q1_negative">
+                        <div class="q1_score">
+                            <span class="score_1" id="rating-value_1">0.0</span>
+                            <span class="full_score">/5</span>
+                        </div>
+                        <img src=" {% static 'images/positive.svg' %}" class="q1_positive">
                     </div>
-                    <img src=" {% static 'images/positive.svg' %}" class="q2_positive">
                 </div>
-            </div>
 
-            <div class="question_3">
-                <img src=" {% static 'images/street_question_3.svg' %}" class="street_question_3">
-                <div class="q2_rating">
-                    <fieldset class="rating_2">
-                        <input type="radio" id="star5_3" name="rating_3" value="5" /><label for="star5_3" class="full"
-                            title="Awesome"></label>
-                        <input type="radio" id="star4.5_3" name="rating_3" value="4.5" /><label for="star4.5_3"
-                            class="half"></label>
-                        <input type="radio" id="star4_3" name="rating_3" value="4" /><label for="star4_3"
-                            class="full"></label>
-                        <input type="radio" id="star3.5_3" name="rating_3" value="3.5" /><label for="star3.5_3"
-                            class="half"></label>
-                        <input type="radio" id="star3_3" name="rating_3" value="3" /><label for="star3_3"
-                            class="full"></label>
-                        <input type="radio" id="star2.5_3" name="rating_3" value="2.5" /><label for="star2.5_3"
-                            class="half"></label>
-                        <input type="radio" id="star2_3" name="rating_3" value="2" /><label for="star2_3"
-                            class="full"></label>
-                        <input type="radio" id="star1.5_3" name="rating_3" value="1.5" /><label for="star1.5_3"
-                            class="half"></label>
-                        <input type="radio" id="star1_3" name="rating_3" value="1" /><label for="star1_3"
-                            class="full"></label>
-                        <input type="radio" id="star0.5_3" name="rating_3" value="0.5" /><label for="star0.5_3"
-                            class="half"></label>
-                    </fieldset>
-                </div>
-                <div class="q3_pn">
-                    <img src="{% static 'images/negative.svg' %}" class="q3_negative">
-                    <div class="q3_score">
-                        <span class="score_3" id="rating-value_3">0.0</span>
-                        <span class="full_score">/5</span>
+                <div class="question_2">
+                    <img src=" {% static 'images/street_question_2.svg' %}" class="street_question_2">
+                    <div class="q2_rating">
+                        <fieldset class="rating_2">
+                            <input type="radio" id="star5_2" name="rating_2" value="5" /><label for="star5_2"
+                                class="full" title="Awesome"></label>
+                            <input type="radio" id="star4.5_2" name="rating_2" value="4.5" /><label for="star4.5_2"
+                                class="half"></label>
+                            <input type="radio" id="star4_2" name="rating_2" value="4" /><label for="star4_2"
+                                class="full"></label>
+                            <input type="radio" id="star3.5_2" name="rating_2" value="3.5" /><label for="star3.5_2"
+                                class="half"></label>
+                            <input type="radio" id="star3_2" name="rating_2" value="3" /><label for="star3_2"
+                                class="full"></label>
+                            <input type="radio" id="star2.5_2" name="rating_2" value="2.5" /><label for="star2.5_2"
+                                class="half"></label>
+                            <input type="radio" id="star2_2" name="rating_2" value="2" /><label for="star2_2"
+                                class="full"></label>
+                            <input type="radio" id="star1.5_2" name="rating_2" value="1.5" /><label for="star1.5_2"
+                                class="half"></label>
+                            <input type="radio" id="star1_2" name="rating_2" value="1" /><label for="star1_2"
+                                class="full"></label>
+                            <input type="radio" id="star0.5_2" name="rating_2" value="0.5" /><label for="star0.5_2"
+                                class="half"></label>
+                        </fieldset>
                     </div>
-                    <img src="{% static 'images/positive.svg' %}" class="q3_positive">
+                    <div class="q2_pn">
+                        <img src=" {% static 'images/negative.svg' %}" class="q2_negative">
+                        <div class="q2_score">
+                            <span class="score_2" id="rating-value_2">0.0</span>
+                            <span class="full_score">/5</span>
+                        </div>
+                        <img src=" {% static 'images/positive.svg' %}" class="q2_positive">
+                    </div>
                 </div>
-            </div>
 
+                <div class="question_3">
+                    <img src=" {% static 'images/street_question_3.svg' %}" class="street_question_3">
+                    <div class="q2_rating">
+                        <fieldset class="rating_2">
+                            <input type="radio" id="star5_3" name="rating_3" value="5" /><label for="star5_3"
+                                class="full" title="Awesome"></label>
+                            <input type="radio" id="star4.5_3" name="rating_3" value="4.5" /><label for="star4.5_3"
+                                class="half"></label>
+                            <input type="radio" id="star4_3" name="rating_3" value="4" /><label for="star4_3"
+                                class="full"></label>
+                            <input type="radio" id="star3.5_3" name="rating_3" value="3.5" /><label for="star3.5_3"
+                                class="half"></label>
+                            <input type="radio" id="star3_3" name="rating_3" value="3" /><label for="star3_3"
+                                class="full"></label>
+                            <input type="radio" id="star2.5_3" name="rating_3" value="2.5" /><label for="star2.5_3"
+                                class="half"></label>
+                            <input type="radio" id="star2_3" name="rating_3" value="2" /><label for="star2_3"
+                                class="full"></label>
+                            <input type="radio" id="star1.5_3" name="rating_3" value="1.5" /><label for="star1.5_3"
+                                class="half"></label>
+                            <input type="radio" id="star1_3" name="rating_3" value="1" /><label for="star1_3"
+                                class="full"></label>
+                            <input type="radio" id="star0.5_3" name="rating_3" value="0.5" /><label for="star0.5_3"
+                                class="half"></label>
+                        </fieldset>
+                    </div>
+                    <div class="q3_pn">
+                        <img src="{% static 'images/negative.svg' %}" class="q3_negative">
+                        <div class="q3_score">
+                            <span class="score_3" id="rating-value_3">0.0</span>
+                            <span class="full_score">/5</span>
+                        </div>
+                        <img src="{% static 'images/positive.svg' %}" class="q3_positive">
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-    <!-- <button type="button" class="btn" id="img_btn"><img  src="next_incomplete.svg"></button> -->
-    <button type="button" class="btn" id="img_btn"><img id="btn_image" src="next_incomplete.svg"></button>
+        <!-- <button type="button" class="btn" id="img_btn"><img  src="next_incomplete.svg"></button> -->
+        <button type="submit" class="btn" id="img_btn"><img id="btn_image"
+                src="{% static 'next_incomplete.svg' %}"></button>
+        </f>
 
 
-
-
-    <script src=" {% static 'js/street-safety-comment.js' %}"></script>
+        <script src=" {% static 'js/street-safety_comment.js' %}"></script>
 </body>
 
 </html>

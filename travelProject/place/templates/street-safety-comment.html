@@ -26,11 +26,15 @@
         <span class="street_place">미국 뉴욕 브루클린</span>
     </div>
 
-    <div class="input-container">
-        <textarea id="input-text" placeholder="해당 지점 치안에 대한 정성 정보를 입력해주세요."></textarea>
-    </div>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="input-container">
+            <input id="input-text" name="content" placeholder="해당 지점 치안에 대한 정성 정보를 입력해주세요." />
+        </div>
+        <button type="submit" class="btn" id="img_btn"><img id="btn_image"
+                src=" {% static '/images/submit_X.svg' %} "></button>
 
-    <button type="button" class="btn" id="img_btn"><img id="btn_image" src="../images/submit_X.svg"></button>
+    </form>
     <script src=" {% static 'js/street-safety.js' %}"></script>
 </body>
 
