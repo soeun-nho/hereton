@@ -16,7 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from place import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('', views.home, name="home"),
+    path('search/', views.search, name="search"),
+    path('select/', views.select, name="select"),
+    path('store_safety_comment/', views.store_safety_comment, name="store_safety_comment"),
+    path('store_safety/', views.store_safety, name="store_safety"),
+    path('street_safety_comment/', views.street_safety_comment, name="street_safety_comment"),
+    path('street_safety/', views.street_safety, name="street_safety"),
 ]

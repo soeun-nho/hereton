@@ -1,32 +1,33 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>거리 치안 평가 - 별점</title>
+    <title>업체 치안 평가 - 별점</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/street-safety.css">
+    <link rel="stylesheet" href="{% static 'css/store-safety.css' %}">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 </head>
 
 <body>
     <div class="container">
-        <img src="../images/Vector 184.svg" class="back_img" />
+        <img src="Vector 184.svg" class="back_img" />
         <span class="title">치안 평가하기</span>
     </div>
 
-    <div class="street">
-        <span class="street_now">지금 평가하려는 거리</span>
-        <span class="street_name">181-195 Bowery</span>
-        <span class="street_place">미국 뉴욕 브루클린</span>
+    <div class="store">
+        <span class="store_now">지금 평가하려는 업체</span>
+        <span class="store_name">보워리 그랜드 호텔</span>
+        <span class="store_address">143 Bowery, New York, NY 10002 미국</span>
     </div>
 
     <div class="question_part">
         <div class="question">
             <div class="question_1">
-                <img src="../images/street_question_1.svg" class="street_question_1">
+                <img src="{% static 'store_question_1.svg' %}" class="store_question_1">
                 <div class="q1_rating">
                     <fieldset class="rating_1">
                         <input type="radio" id="star5" name="rating_1" value="5" /><label for="star5" class="full"
@@ -52,17 +53,17 @@
                     </fieldset>
                 </div>
                 <div class="q1_pn">
-                    <img src="../images/negative.svg" class="q1_negative">
+                    <img src=" {% static 'images/negative.svg' %}" class="q1_negative">
                     <div class="q1_score">
                         <span class="score_1" id="rating-value_1">0.0</span>
                         <span class="full_score">/5</span>
                     </div>
-                    <img src="../images/positive.svg" class="q1_positive">
+                    <img src=" {% static 'images/positive.svg' %}" class="q1_positive">
                 </div>
             </div>
 
             <div class="question_2">
-                <img src="../images/street_question_2.svg" class="street_question_2">
+                <img src=" {% static 'images/store_question_2.svg' %}" class="store_question_2">
                 <div class="q2_rating">
                     <fieldset class="rating_2">
                         <input type="radio" id="star5_2" name="rating_2" value="5" /><label for="star5_2" class="full"
@@ -88,17 +89,17 @@
                     </fieldset>
                 </div>
                 <div class="q2_pn">
-                    <img src="../images/negative.svg" class="q2_negative">
+                    <img src=" {% static 'images/negative.svg' %}" class="q2_negative">
                     <div class="q2_score">
                         <span class="score_2" id="rating-value_2">0.0</span>
                         <span class="full_score">/5</span>
                     </div>
-                    <img src="../images/positive.svg" class="q2_positive">
+                    <img src=" {% static 'positive.svg' %}" class="q2_positive">
                 </div>
             </div>
 
             <div class="question_3">
-                <img src="../images/street_question_3.svg" class="street_question_3">
+                <img src="{% static 'images/store_question_3.svg' %}" class="store_question_3">
                 <div class="q2_rating">
                     <fieldset class="rating_2">
                         <input type="radio" id="star5_3" name="rating_3" value="5" /><label for="star5_3" class="full"
@@ -124,12 +125,12 @@
                     </fieldset>
                 </div>
                 <div class="q3_pn">
-                    <img src="../images/negative.svg" class="q3_negative">
+                    <img src="{% static 'images/negative.svg' %}" class="q3_negative">
                     <div class="q3_score">
                         <span class="score_3" id="rating-value_3">0.0</span>
                         <span class="full_score">/5</span>
                     </div>
-                    <img src="../images/positive.svg" class="q3_positive">
+                    <img src="{% static 'positive.svg' %}" class="q3_positive">
                 </div>
             </div>
 
@@ -137,11 +138,7 @@
     </div>
     <!-- <button type="button" class="btn" id="img_btn"><img  src="next_incomplete.svg"></button> -->
     <button type="button" class="btn" id="img_btn"><img id="btn_image" src="next_incomplete.svg"></button>
-
-
-
-
-    <script src="../js/street-safety-comment.js"></script>
+    <script src="../js/store-safety.js"></script>
 </body>
 
 </html>

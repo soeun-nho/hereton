@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,15 +7,15 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>장소 선택 페이지</title>
-    <link rel="stylesheet" href="../css/select.css" />
+    <link rel="stylesheet" href="{% static 'css/select.css' %}" />
 </head>
 
 <body>
     <div id="map">
-        <img src="../images/image 10.png" alt="지도 이미지">
+        <img src="{% static 'images/image 10.png' %}" alt="지도 이미지">
     </div>
 
-    <script src="../js/select.js"></script>
+    <script src="{% static 'js/select.js' %}"></script>
 </body>
 
 </html>
