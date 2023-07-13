@@ -68,6 +68,7 @@ class Review(models.Model):
     light = models.IntegerField(null=True)
     people = models.IntegerField(null=True)
     clear = models.IntegerField(null=True)
+    title = models.CharField(verbose_name="주소이름", max_length=1208, default=True)
 
     def __str__(self): 
         return self.content

@@ -50,7 +50,8 @@
     </div>
 
     <button class="write-btn">
-        <img src="{% static 'images/Group 1323.png'%}" alt="치안 평가 작성 버튼">
+
+        <a href=" {% url 'street_safety' %}"><img src="{% static 'images/Group 1323.png'%}" alt="치안 평가 작성 버튼"></a>
     </button>
 
     <div id="map">
@@ -104,8 +105,8 @@
             </svg>
         </button>
         <div class="slide-content">
-            <h2 class="name">181-195 Bowery</h2>
-            <p class="address">미국 뉴욕 브루클린</p>
+            <h2 class="name">181-195 Bowery </h2>
+            <p class="address">미국 뉴욕 브루클린 {{review.title}}</p>
             <div class="score">
                 <p class="scoretype">치안 총 평점</p>
                 <div class="starscore">
@@ -120,7 +121,11 @@
                     <p class="five">/5</p>
                 </div>
             </div>
-            <p class="text">매우 낮은 치안 평점을 가지고 있는 곳입니다.<br>해당 지점에 주의하세요.</p>
+            <p class="text">
+
+                매우 낮은 치안 평점을 가지고 있는 곳입니다.<br>해당 지점에 주의하세요.
+            </p>
+
             <svg class="line" xmlns="http://www.w3.org/2000/svg" width="390" height="2" viewBox="0 0 390 2" fill="none">
                 <path d="M0 1.00003L390 0.999996" stroke="#DADCE0" stroke-width="0.4" />
             </svg>
@@ -281,10 +286,10 @@
                                 viewBox="0 0 2 19" fill="none">
                                 <path d="M1 19L1 2.90573e-07" stroke="#DADCE0" stroke-width="0.4" />
                             </svg></p>
-                        <p class="day">0000.00.00 작성</p>
+                        <p class="day">0000.00.00 작성{{place.time}}</p>
                     </div>
 
-                    <p class="letter">방문자들의 실제 치안 평가는 최대 3줄 미리보기가 나옵니다. 방문자들의 실제 치안 평가는 최대 3줄 미리보기
+                    <p class="letter">{{place.content}}방문자들의 실제 치안 평가는 최대 3줄 미리보기가 나옵니다. 방문자들의 실제 치안 평가는 최대 3줄 미리보기
                         가 나옵니다. 방문자들의 실제 치안 평가는 최대 2줄 미리...</p>
 
                     <div class="goodorbad">
