@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import
 from .forms import ReviewForm
 
-ef review_new(request):
+def review_new(request):
     if request.method == 'POST' :
         form = ReviewForm(request.POST)
         if form.is_valid() :
