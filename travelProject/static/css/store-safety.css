@@ -1,438 +1,410 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
 
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 390px;
-    /* height: 844px; */
-
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 390px;
+  /* height: 844px; */
 }
 
 .container {
-    display: flex;
-    margin-top: 61px;
-    width: 390px;
-    margin-bottom: 17px;
+  display: flex;
+  margin-top: 61px;
+  width: 390px;
+  margin-bottom: 17px;
 }
 
 .back_img {
-    margin-left: 27px;
-    margin-right: 104.58px;
-    margin-top: 6px;
-    width: 6.422px;
-    height: 12.844px;
-    flex-shrink: 0;
-
+  margin-left: 27px;
+  margin-right: 104.58px;
+  margin-top: 6px;
+  width: 6.422px;
+  height: 12.844px;
+  flex-shrink: 0;
 }
 
 .title {
-    align-items: center;
-    justify-content: center;
-    color: #202821;
-    text-align: center;
-    font-family: Pretendard;
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    width: 140px;
-    height: 25px;
-
+  align-items: center;
+  justify-content: center;
+  color: #202821;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 140px;
+  height: 25px;
 }
 
 .store {
-    flex-direction: column;
-    margin-left: 27px;
-    margin-top: 17px;
+  flex-direction: column;
+  margin-left: 27px;
+  margin-top: 17px;
 }
 
 .store_now {
-    color: #8000FF;
-    font-family: Pretendard;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    width: 257px;
-    flex-shrink: 0;
-    display: inline-block;
-}
-  
-.store_name {
-    color: var(--black, #202821);
-    font-family: Pretendard;
-    font-size: 20.833px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    display: inline-block;
-    margin-top: 5px;
-}
-  
-.store_address {
-    color: #717579;
-    font-family: Pretendard;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    display: block;
-    margin-top: 5px;
+  color: #8000ff;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 257px;
+  flex-shrink: 0;
+  display: inline-block;
 }
 
+.store_name {
+  color: var(--black, #202821);
+  font-family: Pretendard;
+  font-size: 20.833px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.store_address {
+  color: #717579;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: block;
+  margin-top: 5px;
+}
 
 .question_part {
-    margin-top: 27px;
-    display: flex;
-
+  margin-top: 27px;
+  display: flex;
 }
 
 .question_1 {
-    width: 336px;
-    height: 193px;
-    text-align: center;
-    border-bottom: 0.05px solid #DADCE0; 
+  width: 336px;
+  height: 193px;
+  text-align: center;
+  border-bottom: 0.05px solid #dadce0;
 }
 
 .q1_rating {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 별점 rating */
 
-.rating_1{
-	border: none;
-	float: left;
-    text-align: center;
-    
+.rating_1 {
+  border: none;
+  float: left;
+  text-align: center;
 }
 
-.rating_1 > input{
-	display: none;
-    margin-left: 5px;
+.rating_1 > input {
+  display: none;
+  margin-left: 5px;
 }
 
-.rating_1 > label:before{
-	content: '\f005';
-	font-family: FontAwesome;
-	margin: 12px;
-	font-size: 45px;
-	display: inline-block;
-	cursor: pointer;
-    justify-content: center;  
-    /* letter-spacing: 20px; */
-
+.rating_1 > label:before {
+  content: "\f005";
+  font-family: FontAwesome;
+  margin: 12px;
+  font-size: 45px;
+  display: inline-block;
+  cursor: pointer;
+  justify-content: center;
+  /* letter-spacing: 20px; */
 }
 
-.rating_1 > .half:before{
-	content: '\f089';
-	position: absolute;
-	cursor: pointer;
+.rating_1 > .half:before {
+  content: "\f089";
+  position: absolute;
+  cursor: pointer;
 }
 
-
-.rating_1 > label{
-	color: #ddd;
-	float: right;
-	cursor: pointer;
+.rating_1 > label {
+  color: #ddd;
+  float: right;
+  cursor: pointer;
 }
 
 .rating_1 > input:checked ~ label,
-.rating_1:not(:checked) > label:hover, 
-.rating_1:not(:checked) > label:hover ~ label{
-	color: #8000FF;
+.rating_1:not(:checked) > label:hover,
+.rating_1:not(:checked) > label:hover ~ label {
+  color: #8000ff;
 }
 
 .rating_1 > input:checked + label:hover,
 .rating_1 > input:checked ~ label:hover,
 .rating_1 > label:hover ~ input:checked ~ label,
-.rating_1 > input:checked ~ label:hover ~ label{
-	color: #8000FF;
+.rating_1 > input:checked ~ label:hover ~ label {
+  color: #8000ff;
 }
 
 .q1_pn {
-    display: flex;
-
+  display: flex;
 }
 
 .q1_score {
-    margin-left: 58px;
-    margin-right: 58px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-        
-
+  margin-left: 58px;
+  margin-right: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .score_1 {
-    color: #8000FF;
-    font-family: Pretendard;
-    font-size: 32.842px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  color: #8000ff;
+  font-family: Pretendard;
+  font-size: 32.842px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .full_score {
-    color: #717579;
-    font-family: Pretendard;
-    font-size: 32.842px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  color: #717579;
+  font-family: Pretendard;
+  font-size: 32.842px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .q1_negative {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .q1_positive {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 /* 2번 질문 시작 */
 .question_2 {
-    width: 336px;
-    height: 193px;
-    text-align: center;
-    border-bottom: 0.05px solid #DADCE0; 
-    margin-top: 39.83px;
+  width: 336px;
+  height: 193px;
+  text-align: center;
+  border-bottom: 0.05px solid #dadce0;
+  margin-top: 39.83px;
 }
 
 .q2_rating {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 별점 rating */
 
-.rating_2{
-	border: none;
-	float: left;
-    text-align: center;
-    
+.rating_2 {
+  border: none;
+  float: left;
+  text-align: center;
 }
 
-.rating_2 > input{
-	display: none;
-    margin-left: 5px;
+.rating_2 > input {
+  display: none;
+  margin-left: 5px;
 }
 
-.rating_2 > label:before{
-	content: '\f005';
-	font-family: FontAwesome;
-	margin: 12px;
-	font-size: 45px;
-	display: inline-block;
-	cursor: pointer;
-    justify-content: center;  
-    /* letter-spacing: 20px; */
-
+.rating_2 > label:before {
+  content: "\f005";
+  font-family: FontAwesome;
+  margin: 12px;
+  font-size: 45px;
+  display: inline-block;
+  cursor: pointer;
+  justify-content: center;
+  /* letter-spacing: 20px; */
 }
 
-.rating_2 > .half:before{
-	content: '\f089';
-	position: absolute;
-	cursor: pointer;
+.rating_2 > .half:before {
+  content: "\f089";
+  position: absolute;
+  cursor: pointer;
 }
 
-
-.rating_2 > label{
-	color: #ddd;
-	float: right;
-	cursor: pointer;
+.rating_2 > label {
+  color: #ddd;
+  float: right;
+  cursor: pointer;
 }
 
 .rating_2 > input:checked ~ label,
-.rating_2:not(:checked) > label:hover, 
-.rating_2:not(:checked) > label:hover ~ label{
-	color: #8000FF;
+.rating_2:not(:checked) > label:hover,
+.rating_2:not(:checked) > label:hover ~ label {
+  color: #8000ff;
 }
 
 .rating_2 > input:checked + label:hover,
 .rating_2 > input:checked ~ label:hover,
 .rating_2 > label:hover ~ input:checked ~ label,
-.rating_2 > input:checked ~ label:hover ~ label{
-	color: #8000FF;
+.rating_2 > input:checked ~ label:hover ~ label {
+  color: #8000ff;
 }
 
 .q2_pn {
-    display: flex;
-
+  display: flex;
 }
 
 .q2_score {
-    margin-left: 58px;
-    margin-right: 58px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-        
-
+  margin-left: 58px;
+  margin-right: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .score_2 {
-    color: #8000FF;
-    font-family: Pretendard;
-    font-size: 32.842px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  color: #8000ff;
+  font-family: Pretendard;
+  font-size: 32.842px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .full_score {
-    color: #717579;
-    font-family: Pretendard;
-    font-size: 32.842px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  color: #717579;
+  font-family: Pretendard;
+  font-size: 32.842px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .q2_negative {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .q2_positive {
-    margin-left: auto;
+  margin-left: auto;
 }
-
-
 
 /* q3 시작 */
 
 .question_3 {
-    width: 336px;
-    height: 193px;
-    text-align: center;
-    border-bottom: 0.05px solid #DADCE0; 
-    margin-top: 39.83px;
+  width: 336px;
+  height: 193px;
+  text-align: center;
+  border-bottom: 0.05px solid #dadce0;
+  margin-top: 39.83px;
 }
 
 .q3_rating {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 별점 rating */
 
-.rating_3{
-	border: none;
-	float: left;
-    text-align: center;
-    
+.rating_3 {
+  border: none;
+  float: left;
+  text-align: center;
 }
 
-.rating_3 > input{
-	display: none;
-    margin-left: 5px;
+.rating_3 > input {
+  display: none;
+  margin-left: 5px;
 }
 
-.rating_3 > label:before{
-	content: '\f005';
-	font-family: FontAwesome;
-	margin: 12px;
-	font-size: 45px;
-	display: inline-block;
-	cursor: pointer;
-    justify-content: center;  
-    /* letter-spacing: 20px; */
-
+.rating_3 > label:before {
+  content: "\f005";
+  font-family: FontAwesome;
+  margin: 12px;
+  font-size: 45px;
+  display: inline-block;
+  cursor: pointer;
+  justify-content: center;
+  /* letter-spacing: 20px; */
 }
 
-.rating_3 > .half:before{
-	content: '\f089';
-	position: absolute;
-	cursor: pointer;
+.rating_3 > .half:before {
+  content: "\f089";
+  position: absolute;
+  cursor: pointer;
 }
 
-
-.rating_3 > label{
-	color: #ddd;
-	float: right;
-	cursor: pointer;
+.rating_3 > label {
+  color: #ddd;
+  float: right;
+  cursor: pointer;
 }
 
 .rating_3 > input:checked ~ label,
-.rating_3:not(:checked) > label:hover, 
-.rating_3:not(:checked) > label:hover ~ label{
-	color: #8000FF;
+.rating_3:not(:checked) > label:hover,
+.rating_3:not(:checked) > label:hover ~ label {
+  color: #8000ff;
 }
 
 .rating_3 > input:checked + label:hover,
 .rating_3 > input:checked ~ label:hover,
 .rating_3 > label:hover ~ input:checked ~ label,
-.rating_3 > input:checked ~ label:hover ~ label{
-	color: #8000FF;
+.rating_3 > input:checked ~ label:hover ~ label {
+  color: #8000ff;
 }
 
 .q3_pn {
-    display: flex;
-
+  display: flex;
 }
 
 .q3_score {
-    margin-left: 58px;
-    margin-right: 58px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-        
-
+  margin-left: 58px;
+  margin-right: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .score_3 {
-    color: #8000FF;
-    font-family: Pretendard;
-    font-size: 32.842px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  color: #8000ff;
+  font-family: Pretendard;
+  font-size: 32.842px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .full_score {
-    color: #717579;
-    font-family: Pretendard;
-    font-size: 32.842px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  color: #717579;
+  font-family: Pretendard;
+  font-size: 32.842px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .q3_negative {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .q3_positive {
-    margin-left: auto;
+  margin-left: auto;
 }
-
-
 
 /* 버튼 */
 
 .btn {
-    margin-top: 38.83px;
-    margin-bottom: 50px;
-    border: 0;
-    background-color: transparent;
+  margin-top: 38.83px;
+  margin-bottom: 50px;
+  border: 0;
+  background-color: transparent;
 }
