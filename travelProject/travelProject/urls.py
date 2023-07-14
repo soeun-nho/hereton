@@ -30,6 +30,6 @@ urlpatterns = [
     path('store_safety/', views.store_safety, name="store_safety"),
     path('street_safety_comment/', views.street_safety_comment, name="street_safety_comment"),
     path('street_safety/', views.street_safety, name="street_safety"),
-    path('detail_review/', views.detail_review, name="detail_review"),
+    path('detail_review/<int:id>/', views.detail_review, name="detail_review"),
     path('accounts/', include('accounts.urls', namespace='accounts')),
 ]

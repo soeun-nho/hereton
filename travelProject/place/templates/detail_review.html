@@ -13,7 +13,8 @@
 
 <body>
     <div class="container">
-        <button type="button" class="btn_back" id="back_btn"><img id="back_image" src="Vector 184.svg"></button>
+        <button type="button" class="btn_back" id="back_btn"><img id="back_image"
+                src="{% static 'images/Vector 184.svg' %}"></button>
         <span class="title">평가 상세보기</span>
     </div>
 
@@ -27,16 +28,12 @@
 
     <div class="review_rating">
         <img class="red_star" src="{% static 'images/red_star.svg' %}">
-        <span class="overall_rating">0.9</span>
+        <span class="overall_rating">{{review.people}}</span>
         <span class="full_rating">/5</span>
-        <span class="rating_date">0000.00.00 작성</span>
+        <span class="rating_date">{{review.date}} 작성 </span>
     </div>
 
-    <span class="user_comment">방문자들의 실제 치안 평가, 정성정보, 작성한 내용이 들어갑니다. 방문자들의 실제 치안 평가, 정성정보, 작성한 내용이 들어갑니다.
-        방문자들의 실제 치안 평가, 정성정보, 작성한 내용이 들어갑니다. 방문자들의 실제 치안 평가, 정성정보, 작성한 내용이 들어갑니다.
-        방문자들의 실제 치안 평가, 정성정보, 작성한 내용이 들어갑니다. 방문자들의 실제 치안 평가, 정성정보, 작성한 내용이 들어갑니다.
-        방문자들의 실제 치안 평가, 정성정보, 작성한 내용이 들어갑니다. 방문자들의 실제 치안 평가, 정성정보, 작성한 내용이 들어갑니다.
-        방문자들의 실제 치안 평가, 정성정보, 작성한 내용이 들어갑니다.
+    <span class="user_comment"> eoeoeeo {{review.content}}
     </span>
 
     <div class="blank_space"></div>
@@ -45,19 +42,19 @@
         <div class="streetlight_grade">
             <img class="streetlight_img" src="{% static 'images/street_streetlight.svg'%}">
             <img class="streetlight_star" src="{% static 'images/red_star.svg'%}">
-            <span class="streetlight_rating">0.5</span>
+            <span class="streetlight_rating">{{review.light}}</span>
             <span class="streetlight_full_rating">/5</span>
         </div>
         <div class="crowd_grade">
             <img class="crowd_img" src="{% static 'images/street_crowd.svg'%}">
             <img class="crowd_star" src="{% static 'images/yellow_star.svg'%}">
-            <span class="crowd_rating">2.5</span>
+            <span class="crowd_rating">{{review.people}}</span>
             <span class="crowd_full_rating">/5</span>
         </div>
         <div class="clean_grade">
             <img class="clean_img" src="{% static 'images/street_clean.svg'%}">
             <img class="clean_star" src="{% static 'images/red_star.svg'%}">
-            <span class="clean_rating">0.5</span>
+            <span class="clean_rating">{{review.clear}}</span>
             <span class="clean_full_rating">/5</span>
         </div>
     </div>
@@ -65,11 +62,11 @@
     <div class="blank_space"></div>
 
     <div class="recommended">
-        <img class="user_recommend" src="recommend.svg">
-        <img class="user_unrecommend" src="unrecommend.svg">
+        <img class="user_recommend" src="{% static 'images/recommend.svg' %}">
+        <img class="user_unrecommend" src="{% static 'images/unrecommend.svg'%}">
     </div>
 
-    <script src="detail_review.js"></script>
+    <script src="{% static 'static/js/detail_review.js' %}"></script>
 </body>
 
 </html>

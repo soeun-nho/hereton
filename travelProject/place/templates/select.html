@@ -289,8 +289,14 @@
                         <p class="day">0000.00.00 작성{{place.time}}</p>
                     </div>
 
-                    <p class="letter">{{place.content}}방문자들의 실제 치안 평가는 최대 3줄 미리보기가 나옵니다. 방문자들의 실제 치안 평가는 최대 3줄 미리보기
-                        가 나옵니다. 방문자들의 실제 치안 평가는 최대 2줄 미리...</p>
+                    <p class="letter">
+                        {% for review in review_list %}
+                        {{review.content}}
+                        {% endfor %}
+                        <hr>
+
+
+                    </p>
 
                     <div class="goodorbad">
                         <button class="good">
@@ -324,7 +330,7 @@
         </div>
     </div>
 
-    <script src="{% static 'js/select.js'%}"></script>
+    <script src="{% static 'static/js/select.js'%}"></script>
 </body>
 
 </html>

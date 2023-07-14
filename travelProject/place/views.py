@@ -32,15 +32,9 @@ def search(request):
 #     return render(request, 'select.html', {'title':title})
 
 def select(request):
-    if request.method =='POST':
-        title = request.POST.get('title')
-        Review.objects.create(
-            title= title,
-        )
-        return redirect('select') #후기 페이지로
-    else:
-        title= request.GET.get('title')
-    return render(request, 'select.html', {'title':title})
+    review_list = Review.objects.all().order_by('-id')
+    context = {'review_list':review_list}
+    return render(request, "select.html", context)
 
 
 def store_safety_comment(request):
@@ -79,6 +73,7 @@ def street_safety(request):
     #     )
     return render(request, 'street-safety.html')
 
-def detail_review(request):
-    return render(request, 'detail_review.html')
+def detail_review(request,id):
+    review = Review.objects.get(id=id)
+    return render(request, 'detail_review.html', {'review':review})
 
