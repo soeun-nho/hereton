@@ -67,7 +67,7 @@ divs.forEach((div, index) => {
                 });
             } else {
                 scoreImgs.forEach((scoreImg) => {
-                    scoreImg.src = "";
+                    scoreImg.src = imagePath + " 1.png";
                 });
             }
 
@@ -158,6 +158,7 @@ function setScoreImagePosition(position, scoreImg) {
     scoreImg.style.zIndex = "-3"; // scoreImg가 위로 나타나도록 z-index 설정
 }
 
+//클릭시 스크롤
 const locationDiv = document.querySelector(".location");
 const nowElement = document.getElementById("now");
 
