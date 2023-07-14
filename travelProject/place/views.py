@@ -20,6 +20,17 @@ def home(request):
 def search(request):
     return render(request, 'search.html')
 
+# def select(request):
+#     if request.method =='POST':
+#         title = request.POST.get('title')
+#         Review.objects.create(
+#             title= title,
+#         )
+#         return redirect('select') #후기 페이지로
+#     else:
+#         title= request.GET.get('title')
+#     return render(request, 'select.html', {'title':title})
+
 def select(request):
     if request.method =='POST':
         title = request.POST.get('title')
@@ -30,6 +41,7 @@ def select(request):
     else:
         title= request.GET.get('title')
     return render(request, 'select.html', {'title':title})
+
 
 def store_safety_comment(request):
     return render(request, 'store-safety-comment.html')
