@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/home.css '%} " />
     <title>홈</title>
+
 </head>
 
 <body>
-
+    {% if user.is_authenticated %}
+    <a href="{% url 'accounts:logout' %}"> {{ user.username }}님 로그아웃</a>
     <div class="search-container">
         <div class="search-bar-inner">
             <div class="input-wrapper">
@@ -144,6 +146,10 @@
     <div id="map">
         <img src="{% static '/images/map.png'%}" alt="지도 이미지" />
     </div>
+    {% else %}
+    <a href="{% url 'accounts:join' %}" id="join_css">회원가입</a>
+    <a href="{% url 'accounts:login' %}" id="login_css">로그인</a>
+    {% endif %}
     <script src="{% static '/js/home.js'%}"></script>
 </body>
 
