@@ -1,6 +1,8 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
 body {
     -ms-overflow-style: none;
+    width: 390px;
+    height: 844px;
 }
 
 ::-webkit-scrollbar {
@@ -9,9 +11,12 @@ body {
 #map {
     width: 100%;
     height: 100%;
+    top: 0%;
+    left: 50%;
     position: relative;
-    margin: 0;
     z-index: -15;
+    display: flex;
+    transform: translate(-50%, -3%);
 }
 
 /*검색창*/
