@@ -147,6 +147,7 @@
         <img src="{% static '/images/map.png'%}" alt="지도 이미지" />
     </div>
     {% else %}
+
     <a href="{% url 'accounts:join' %}" id="join_css">회원가입</a>
     <a href="{% url 'accounts:login' %}" id="login_css">로그인</a>
     {% endif %}
