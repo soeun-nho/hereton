@@ -73,7 +73,7 @@ divs.forEach((div, index) => {
 
             const coordinate1 = [
                 /*{ x: 63.66, y: 86.21, name: "st A" },*/
-                { x: 96.23, y: 60.53, name: "st B" },
+                /*{ x: 96.23, y: 60.53, name: "st B" },*/
                 { x: 128.37, y: 56.36, name: "st C" },
                 { x: 149.25, y: 94.97, name: "st D" },
                 { x: 162.19, y: 43.42, name: "st E" },
@@ -85,7 +85,7 @@ divs.forEach((div, index) => {
             ];
             const coordinate2 = [
                 /* { x: 81.2, y: 43.63, name: "pl A" },*/
-                { x: 107.08, y: 104.99, name: "pl B" },
+                /*{ x: 107.08, y: 104.99, name: "pl B" },*/
                 { x: 132.76, y: 27.34, name: "pl C" },
                 { x: 139.85, y: 142.15, name: "pl D" },
                 { x: 179.72, y: 108.96, name: "pl E" },
@@ -158,7 +158,6 @@ function setScoreImagePosition(position, scoreImg) {
     scoreImg.style.zIndex = "-3"; // scoreImg가 위로 나타나도록 z-index 설정
 }
 
-//클릭시 스크롤
 const locationDiv = document.querySelector(".location");
 const nowElement = document.getElementById("now");
 
@@ -182,4 +181,12 @@ searchContainer.addEventListener("click", handleSearch);
 
 function handleSearch() {
     window.location.href = "search.html";
+}
+
+const pinBtn = document.querySelector(".pin");
+
+pinBtn.addEventListener("click", handlePin);
+
+function handlePin() {
+    window.location.href = "select.html";
 }
