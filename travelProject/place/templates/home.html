@@ -5,17 +5,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-    <link rel="stylesheet" href="{% static '/css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css '%} " />
     <title>홈</title>
 </head>
 
 <body>
-    {% if user.is_authenticated %}
-    <a href="{% url 'accounts:logout' %}"> {{ user.username }}님 로그아웃</a>
-    {% else %}
-    <a href="{% url 'accounts:join' %}">회원가입</a>
-    <a href="{% url 'accounts:login' %}">로그인</a>
-    {% endif %}
 
     <div class="search-container">
         <div class="search-bar-inner">
@@ -35,27 +29,27 @@
     </div>
     <div class="category">
         <div class="st_light">
-            <img src="{% static 'images/st_light_black.svg' %}" class="st_light_icon" />
+            <img src="{% static '/images/st_light_black.svg' %}" class="st_light_icon" />
             <p>주변이 밝은 거리</p>
         </div>
         <div class="st_people">
-            <img src="{% static 'images/st_people_black.svg' %}" class="st_people_icon" />
+            <img src="{% static '/images/st_people_black.svg' %}" class="st_people_icon" />
             <p>사람이 많은 거리</p>
         </div>
         <div class="st_clean">
-            <img src="{% static 'images/st_clean_black.svg' %}" class="st_clean_icon" />
+            <img src="{% static '/images/st_clean_black.svg'%}" class="st_clean_icon" />
             <p>정돈된 거리</p>
         </div>
         <div class="pl_clean">
-            <img src="{% static 'images/pl_clean_black.svg' %}" class="pl_clean_icon" />
+            <img src="{% static '/images/pl_clean_black.svg' %}" class="pl_clean_icon" />
             <p>업체 내 공간상태</p>
         </div>
         <div class="pl_station">
-            <img src="{% static 'images/pl_station_black.svg' %}" class="pl_station_icon" />
+            <img src="{% static '/images/pl_station_black.svg' %}" class="pl_station_icon" />
             <p>정류장까지의 거리</p>
         </div>
         <div class="pl_toilet">
-            <img src="{% static 'images/pl_toilet_black.svg' %}" class="pl_toilet_icon" />
+            <img src="{% static '/images/pl_toilet_black.svg' %}" class="pl_toilet_icon" />
             <p>업체 화장실 상태</p>
         </div>
     </div>
@@ -83,11 +77,9 @@
             </filter>
         </defs>
     </svg>
-
     <div class="logout">
         <svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
             <g filter="url(#filter0_d_273_2143)">
-                <a href="{% url 'accounts:logout' %}"></a>
                 <circle cx="31.5" cy="29.5" r="21.5" fill="white" />
             </g>
             <path
@@ -112,7 +104,6 @@
             </defs>
         </svg>
     </div>
-
     <div class="location">
         <svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
             <g filter="url(#filter0_d_74_149)">
@@ -149,11 +140,11 @@
         </svg>
     </div>
     <div class="pin"><img src="" class="score" /></div>
-    <div id="map">
-        <img src=".{% static 'images/map.png' %}" alt="지도 이미지" />
-    </div>
 
-    <script src="{% static 'js/home.js' %}"></script>
+    <div id="map">
+        <img src="{% static '/images/map.png'%}" alt="지도 이미지" />
+    </div>
+    <script src="{% static '/js/home.js'%}"></script>
 </body>
 
 </html>

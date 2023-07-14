@@ -15,7 +15,8 @@ from .models import *
 #     return render(request, 'yeogi/street-safety-comment.html', {'form' : form})
 
 def home(request):
-    return render(request, 'home.html')
+    review_list = Review.objects.all()
+    return render(request, 'home.html',{'review_list':review_list} )
 
 def search(request):
     return render(request, 'search.html')

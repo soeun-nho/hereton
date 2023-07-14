@@ -1,238 +1,238 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
 body {
-    -ms-overflow-style: none;
-    width: 390px;
-    height: 844px;
+  -ms-overflow-style: none;
+  width: 390px;
+  height: 844px;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 #map {
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 50%;
-    position: relative;
-    z-index: -15;
-    display: flex;
-    transform: translate(-50%, -3%);
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 50%;
+  position: relative;
+  z-index: -15;
+  display: flex;
+  transform: translate(-50%, -3%);
 }
 
 /*검색창*/
 .search-container {
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .search-bar {
-    width: 325px;
-    height: 47.807px;
-    flex-shrink: 0;
-    border-radius: 23.904px;
-    border: 0.997px solid #ededed;
-    background: #fff;
-    box-shadow: 0px 0px 6.977635860443115px 0.9968051314353943px
-        rgba(0, 0, 0, 0.1);
-    padding: 0 auto;
+  width: 325px;
+  height: 47.807px;
+  flex-shrink: 0;
+  border-radius: 23.904px;
+  border: 0.997px solid #ededed;
+  background: #fff;
+  box-shadow: 0px 0px 6.977635860443115px 0.9968051314353943px
+    rgba(0, 0, 0, 0.1);
+  padding: 0 auto;
 }
 
 .search-bar-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 .search {
-    right: 20px;
-    position: absolute;
-    top: 55%;
-    transform: translateY(-50%);
-    padding: 0;
-    background: none;
-    border: none;
+  right: 20px;
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  padding: 0;
+  background: none;
+  border: none;
 }
 
 .input-wrapper input::placeholder {
-    color: #aeaeae;
-    font-family: Pretendard-Regular;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  color: #aeaeae;
+  font-family: Pretendard-Regular;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .input-wrapper input {
-    padding-left: 25px;
+  padding-left: 25px;
 }
 
 /*가로 스크롤 되는 카테고리*/
 .category {
-    display: inline-flex;
-    width: 100%;
-    height: 2.5rem;
-    padding: 0.0625rem 10.125rem 0.0625rem 0.0625rem;
-    gap: 0.3125rem;
-    overflow-x: auto;
-    white-space: nowrap;
-    margin: 7.5rem 0.81rem 0rem 0.81rem;
-    padding-right: 1px;
-    position: fixed; /* 상단 네비게이션 등의 높이에 따라 조정 */
+  display: inline-flex;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.0625rem 10.125rem 0.0625rem 0.0625rem;
+  gap: 0.3125rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 7.5rem 0.81rem 0rem 0.81rem;
+  padding-right: 1px;
+  position: fixed; /* 상단 네비게이션 등의 높이에 따라 조정 */
 }
 p {
-    display: flex;
-    color: #202821;
-    font-family: Pretendard;
-    font-size: 0.85rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.7935rem;
-    margin: 0;
+  display: flex;
+  color: #202821;
+  font-family: Pretendard;
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.7935rem;
+  margin: 0;
 }
 
 /*주변이 밝은 거리*/
 .st_light {
-    display: flex;
-    width: 9.1875rem;
-    height: 2.125rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1.875rem;
-    background: #ffffff;
-    box-shadow: 0px 0px 4.5333333015441895px 0px rgba(0, 0, 0, 0.22);
-    padding: 0.14169rem 0.92081rem;
-    gap: 0.425rem;
+  display: flex;
+  width: 9.1875rem;
+  height: 2.125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.875rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 4.5333333015441895px 0px rgba(0, 0, 0, 0.22);
+  padding: 0.14169rem 0.92081rem;
+  gap: 0.425rem;
 }
 .st_light_icon {
-    display: flex;
-    width: 1.1765rem;
-    height: 1.25rem;
-    stroke-width: 1.176px;
-    stroke: #202821;
+  display: flex;
+  width: 1.1765rem;
+  height: 1.25rem;
+  stroke-width: 1.176px;
+  stroke: #202821;
 }
 
 /*사람이 많은 거리*/
 .st_people {
-    display: flex;
-    width: 8.25rem;
-    height: 2.125rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1.875rem;
-    background: #ffffff;
-    box-shadow: 0px 0px 4.5333333015441895px 0px rgba(0, 0, 0, 0.22);
-    padding: 0.14169rem 0.92081rem;
-    gap: 0.425rem;
+  display: flex;
+  width: 8.25rem;
+  height: 2.125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.875rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 4.5333333015441895px 0px rgba(0, 0, 0, 0.22);
+  padding: 0.14169rem 0.92081rem;
+  gap: 0.425rem;
 }
 .st_people_icon {
-    display: flex;
-    width: 0.84238rem;
-    height: 1.34419rem;
-    fill: #202821;
+  display: flex;
+  width: 0.84238rem;
+  height: 1.34419rem;
+  fill: #202821;
 }
 
 /*정돈된 거리*/
 .st_clean {
-    display: flex;
-    width: 7.4375rem;
-    height: 2.125rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1.875rem;
-    background: #ffffff;
-    box-shadow: 0px 0px 4.5333333015441895px 0px rgba(0, 0, 0, 0.22);
-    padding: 0.14169rem 0.92081rem;
-    gap: 0.425rem;
+  display: flex;
+  width: 7.4375rem;
+  height: 2.125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.875rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 4.5333333015441895px 0px rgba(0, 0, 0, 0.22);
+  padding: 0.14169rem 0.92081rem;
+  gap: 0.425rem;
 }
 .st_clean_icon {
-    display: flex;
-    width: 1.37506rem;
-    height: 1.375rem;
+  display: flex;
+  width: 1.37506rem;
+  height: 1.375rem;
 }
 
 /*업체 내 공간 상태*/
 .pl_clean {
-    display: flex;
-    width: 8.875rem;
-    height: 2.125rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1.875rem;
-    background: #ffffff;
-    box-shadow: 0px 0px 4.5333333015441895px 0px rgba(0, 0, 0, 0.22);
-    padding: 0.14169rem 0.92081rem;
-    gap: 0.425rem;
+  display: flex;
+  width: 8.875rem;
+  height: 2.125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.875rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 4.5333333015441895px 0px rgba(0, 0, 0, 0.22);
+  padding: 0.14169rem 0.92081rem;
+  gap: 0.425rem;
 }
 .pl_clean_icon {
-    display: flex;
-    width: 1.21863rem;
-    height: 1.21894rem;
+  display: flex;
+  width: 1.21863rem;
+  height: 1.21894rem;
 }
 
 /*정류장까지의 거리*/
 .pl_station {
-    display: flex;
-    width: 9.75rem;
-    height: 2.125rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1.875rem;
-    background: #ffffff;
-    box-shadow: 0px 0px 4.5333333015441895px 0px rgba(0, 0, 0, 0.22);
-    padding: 0.14169rem 0.92081rem;
-    gap: 0.425rem;
+  display: flex;
+  width: 9.75rem;
+  height: 2.125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.875rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 4.5333333015441895px 0px rgba(0, 0, 0, 0.22);
+  padding: 0.14169rem 0.92081rem;
+  gap: 0.425rem;
 }
 .pl_station_icon {
-    display: flex;
-    width: 1.375rem;
-    height: 1.40938rem;
+  display: flex;
+  width: 1.375rem;
+  height: 1.40938rem;
 }
 
 /*업체 제공 화장실 상태*/
 .pl_toilet {
-    display: flex;
-    width: 10.875rem;
-    height: 2.125rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1.875rem;
-    background: #ffffff;
-    box-shadow: 0px 0px 4.5333333015441895px 0px rgba(0, 0, 0, 0.22);
-    padding: 0.14169rem 0.92081rem;
-    gap: 0.425rem;
+  display: flex;
+  width: 10.875rem;
+  height: 2.125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.875rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 4.5333333015441895px 0px rgba(0, 0, 0, 0.22);
+  padding: 0.14169rem 0.92081rem;
+  gap: 0.425rem;
 }
 .pl_toilet_icon {
-    display: flex;
-    width: 1.23406rem;
-    height: 1.39163rem;
-    fill: #202821;
+  display: flex;
+  width: 1.23406rem;
+  height: 1.39163rem;
+  fill: #202821;
 }
 
 #now {
-    display: inline-flex;
-    position: absolute;
-    left: 780px;
-    top: 364px;
-    transform: translate(-50%, -50%);
-    z-index: -3;
+  display: inline-flex;
+  position: absolute;
+  left: 780px;
+  top: 364px;
+  transform: translate(-50%, -50%);
+  z-index: -3;
 }
 .logout {
-    display: flex;
-    width: 2.6875rem;
-    height: 2.6875rem;
-    position: fixed;
-    bottom: 4rem;
-    right: 0.81rem;
+  display: flex;
+  width: 2.6875rem;
+  height: 2.6875rem;
+  position: fixed;
+  bottom: 4rem;
+  right: 0.81rem;
 }
 
 .location {
-    display: flex;
-    width: 2.6875rem;
-    height: 2.6875rem;
-    position: fixed;
-    bottom: 1.63rem;
-    right: 0.81rem;
+  display: flex;
+  width: 2.6875rem;
+  height: 2.6875rem;
+  position: fixed;
+  bottom: 1.63rem;
+  right: 0.81rem;
 }
