@@ -28,7 +28,7 @@ class Kenmare(models.Model) :
     user_people = models.DecimalField(max_digits=2, decimal_places=1)
     user_clear = models.DecimalField(max_digits=2, decimal_places=1)
     date = models.CharField(max_length=30)
-    content = models.TextField(max_length=200)
+    content = models.TextField(max_length=500)
 
 
 
@@ -46,7 +46,7 @@ class Bowery153_171(models.Model) :
     user_people = models.DecimalField(max_digits=2, decimal_places=1)
     user_clear = models.DecimalField(max_digits=2, decimal_places=1)
     date = models.CharField(max_length=30)
-    content = models.TextField(max_length=200)
+    content = models.TextField(max_length=500)
 
 class Bowery181(models.Model) :
     name = models.CharField(max_length=100)
@@ -62,7 +62,7 @@ class Bowery181(models.Model) :
     user_people = models.DecimalField(max_digits=2, decimal_places=1)
     user_clear = models.DecimalField(max_digits=2, decimal_places=1)
     date = models.CharField(max_length=30)
-    content = models.TextField(max_length=200)
+    content = models.TextField(max_length=500, blank=True)
 
 class Broome334(models.Model) :
     name = models.CharField(max_length=100)
@@ -78,7 +78,7 @@ class Broome334(models.Model) :
     user_people = models.DecimalField(max_digits=2, decimal_places=1)
     user_clear = models.DecimalField(max_digits=2, decimal_places=1)
     date = models.CharField(max_length=30)
-    content = models.TextField(max_length=200)
+    content = models.TextField(max_length=500)
 
 class Bowery68(models.Model) :
     name = models.CharField(max_length=100)
@@ -94,7 +94,7 @@ class Bowery68(models.Model) :
     user_people = models.DecimalField(max_digits=2, decimal_places=1)
     user_clear = models.DecimalField(max_digits=2, decimal_places=1)
     date = models.CharField(max_length=30)
-    content = models.TextField(max_length=200)
+    content = models.TextField(max_length=500)
 
 
 class Chrystie(models.Model) :
@@ -111,4 +111,4 @@ class Chrystie(models.Model) :
     user_people = models.DecimalField(max_digits=2, decimal_places=1)
     user_clear = models.DecimalField(max_digits=2, decimal_places=1)
     date = models.CharField(max_length=30)
-    content = models.TextField(max_length=200)
+    content = models.TextField(max_length=500)
