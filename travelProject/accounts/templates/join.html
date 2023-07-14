@@ -26,10 +26,10 @@
         {% csrf_token %}
         <div class="input-container">
             <p>사용하실 아이디를 입력해주세요.</p>
-            <input type="text" id="input-id" name="input-text" placeholder="아이디 입력"></input>
+            <input type="text" id="input-id" name="input-id" placeholder="아이디 입력"></input>
             <p>사용하실 비밀번호를 입력해주세요.</p>
-            <input type="password" id="input-pwd" name="input-text" placeholder="비밀번호 입력"></input>
-            <input type="password" id="re-input-pwd" name="input-text" placeholder="비밀번호 재확인"></input>
+            <input type="password" id="input-pwd" name="input-pwd" placeholder="비밀번호 입력"></input>
+            <input type="password" id="re-input-pwd" name="re-input-pwd" placeholder="비밀번호 재확인"></input>
             <img id="correct" src="{% static 'images/correct.png'%}">
         </div>
         <button type="submit" class="btn" id="img_btn">
