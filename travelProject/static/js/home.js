@@ -32,17 +32,17 @@ divs.forEach((div, index) => {
             changeImage(this.querySelector("img"));
 
             const score = parseFloat(this.querySelector("p").textContent);
-            let imagePath = "./image/st_light";
+            let imagePath = "../images/st_light";
             if (div.classList.contains("st_people")) {
-                imagePath = "./image/st_people";
+                imagePath = "../images/st_people";
             } else if (div.classList.contains("st_clean")) {
-                imagePath = "./image/st_clean";
+                imagePath = "../images/st_clean";
             } else if (div.classList.contains("pl_clean")) {
-                imagePath = "./image/pl_clean";
+                imagePath = "../images/pl_clean";
             } else if (div.classList.contains("pl_station")) {
-                imagePath = "./image/pl_station";
+                imagePath = "../images/pl_station";
             } else if (div.classList.contains("pl_toilet")) {
-                imagePath = "./image/pl_toilet";
+                imagePath = "../images/pl_toilet";
             }
 
             if (score >= 4.1) {
@@ -67,13 +67,13 @@ divs.forEach((div, index) => {
                 });
             } else {
                 scoreImgs.forEach((scoreImg) => {
-                    scoreImg.src = "";
+                    scoreImg.src = imagePath + " 1.png";
                 });
             }
 
             const coordinate1 = [
                 /*{ x: 63.66, y: 86.21, name: "st A" },*/
-                { x: 96.23, y: 60.53, name: "st B" },
+                /*{ x: 96.23, y: 60.53, name: "st B" },*/
                 { x: 128.37, y: 56.36, name: "st C" },
                 { x: 149.25, y: 94.97, name: "st D" },
                 { x: 162.19, y: 43.42, name: "st E" },
@@ -85,7 +85,7 @@ divs.forEach((div, index) => {
             ];
             const coordinate2 = [
                 /* { x: 81.2, y: 43.63, name: "pl A" },*/
-                { x: 107.08, y: 104.99, name: "pl B" },
+                /*{ x: 107.08, y: 104.99, name: "pl B" },*/
                 { x: 132.76, y: 27.34, name: "pl C" },
                 { x: 139.85, y: 142.15, name: "pl D" },
                 { x: 179.72, y: 108.96, name: "pl E" },
@@ -164,6 +164,7 @@ const nowElement = document.getElementById("now");
 locationDiv.addEventListener("click", function () {
     nowElement.scrollIntoView({ behavior: "smooth" });
 });
+
 //로그아웃 버튼 누르면 이동
 const logoutBtn = document.querySelector(".logout");
 
@@ -172,6 +173,7 @@ logoutBtn.addEventListener("click", handleLogout);
 function handleLogout() {
     window.location.href = "login.html";
 }
+
 //검색창 누르면 검색페이지로 이동
 const searchContainer = document.querySelector(".search-container");
 
@@ -179,4 +181,12 @@ searchContainer.addEventListener("click", handleSearch);
 
 function handleSearch() {
     window.location.href = "search.html";
+}
+
+const pinBtn = document.querySelector(".pin");
+
+pinBtn.addEventListener("click", handlePin);
+
+function handlePin() {
+    window.location.href = "select.html";
 }
