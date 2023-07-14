@@ -3,66 +3,6 @@ from django.db import models
 
 # Create your models here.
 
-# class Category(models.Model) :
-#     name = models.CharField(max_length=200, db_index=True)
-#     meta_description = models.TextField(blank = True)
-#     slug = models.SlugField(max_length=200, db_index=True, unique=True, allow_unicode=True)
-
-#     class Meta :
-#         ordering = ['name']
-#         verbose_name = 'category'
-#         verbose_name_plural = 'categories'
-
-#     def __str__(self):
-#         return self.name
-
-#     def get_absolute_url(self):
-#         return reverse('place:place_in_category', args=[self.slug])
-
-
-# class Place(models.Model) :
-#     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name='places')
-#     name = models.CharField(max_length=20, db_index=True)
-#     slug = models.SlugField(max_length=100, db_index=True, unique=True, allow_unicode=True)
-#     address = models.CharField(max_length=30, db_index=True)
-#     image = models.ImageField(upload_to='place/%Y/%m/%d', blank= True)
-#     description = models.TextField(max_length=100, blank= True)
-#     cleanliness = models.IntegerField()
-#     station = models.IntegerField()
-#     toilet = models.IntegerField()
-
-#     class Meta :
-#         ordering = ['-created']
-#         index_together = [['id', 'slug']]
-
-#     def __str__(self):
-#         return self.name
-
-#     def get_absolute_url(self):
-#         return reverse('place:place_detail', args=[self.id, self.slug])
-
-# class Street(models.Model) :
-#     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name='places')
-#     name = models.CharField(max_length=20, db_index=True)
-#     slug = models.SlugField(max_length=100, db_index=True, unique=True, allow_unicode=True)
-#     address = models.CharField(max_length=30, db_index=True)
-#     image = models.ImageField(upload_to='place/%Y/%m/%d', blank=True)
-#     description = models.TextField(max_length=100, blank= True)
-#     light = models.IntegerField()
-#     people = models.IntegerField()
-#     clear = models.IntegerField()
-
-#     class Meta:
-#         ordering = ['-created']
-#         index_together = [['id', 'slug']]
-
-#     def __str__(self):
-#         return self.name
-
-#     def get_absolute_url(self):
-#         return reverse('place:place_detail', args=[self.id, self.slug])
-
-
 class Review(models.Model):
     content = models.CharField(verbose_name="텍스트리뷰", max_length=128)
     light = models.IntegerField(null=True)
@@ -72,3 +12,103 @@ class Review(models.Model):
 
     def __str__(self): 
         return self.content
+    
+
+class Kenmare(models.Model) :
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
+    # light = models.DecimalField(max_digits=2, decimal_places=1)
+    # people = models.DecimalField(max_digits=2, decimal_places=1)
+    # clear = models.DecimalField(max_digits=2, decimal_places=1)
+    avg = models.DecimalField(max_digits=2, decimal_places=1)
+    user_name = models.CharField(max_length=20)
+    user_id = models.CharField(max_length=20)
+    user_avg = models.DecimalField(max_digits=2, decimal_places=1)
+    user_light = models.DecimalField(max_digits=2, decimal_places=1)
+    user_people = models.DecimalField(max_digits=2, decimal_places=1)
+    user_clear = models.DecimalField(max_digits=2, decimal_places=1)
+    date = models.CharField(max_length=30)
+    content = models.TextField(max_length=200)
+
+
+
+class Bowery153_171(models.Model) :
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
+    # light = models.DecimalField(max_digits=2, decimal_places=1)
+    # people = models.DecimalField(max_digits=2, decimal_places=1)
+    # clear = models.DecimalField(max_digits=2, decimal_places=1)
+    avg = models.DecimalField(max_digits=2, decimal_places=1)
+    user_name = models.CharField(max_length=20)
+    user_id = models.CharField(max_length=20)
+    user_avg = models.DecimalField(max_digits=2, decimal_places=1)
+    user_light = models.DecimalField(max_digits=2, decimal_places=1)
+    user_people = models.DecimalField(max_digits=2, decimal_places=1)
+    user_clear = models.DecimalField(max_digits=2, decimal_places=1)
+    date = models.CharField(max_length=30)
+    content = models.TextField(max_length=200)
+
+class Bowery181(models.Model) :
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
+    # light = models.DecimalField(max_digits=2, decimal_places=1)
+    # people = models.DecimalField(max_digits=2, decimal_places=1)
+    # clear = models.DecimalField(max_digits=2, decimal_places=1)
+    avg = models.DecimalField(max_digits=2, decimal_places=1)
+    user_name = models.CharField(max_length=20)
+    user_id = models.CharField(max_length=20)
+    user_avg = models.DecimalField(max_digits=2, decimal_places=1)
+    user_light = models.DecimalField(max_digits=2, decimal_places=1)
+    user_people = models.DecimalField(max_digits=2, decimal_places=1)
+    user_clear = models.DecimalField(max_digits=2, decimal_places=1)
+    date = models.CharField(max_length=30)
+    content = models.TextField(max_length=200)
+
+class Broome334(models.Model) :
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
+    # light = models.DecimalField(max_digits=2, decimal_places=1)
+    # people = models.DecimalField(max_digits=2, decimal_places=1)
+    # clear = models.DecimalField(max_digits=2, decimal_places=1)
+    avg = models.DecimalField(max_digits=2, decimal_places=1)
+    user_name = models.CharField(max_length=20)
+    user_id = models.CharField(max_length=20)
+    user_avg = models.DecimalField(max_digits=2, decimal_places=1)
+    user_light = models.DecimalField(max_digits=2, decimal_places=1)
+    user_people = models.DecimalField(max_digits=2, decimal_places=1)
+    user_clear = models.DecimalField(max_digits=2, decimal_places=1)
+    date = models.CharField(max_length=30)
+    content = models.TextField(max_length=200)
+
+class Bowery68(models.Model) :
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
+    # light = models.DecimalField(max_digits=2, decimal_places=1)
+    # people = models.DecimalField(max_digits=2, decimal_places=1)
+    # clear = models.DecimalField(max_digits=2, decimal_places=1)
+    avg = models.DecimalField(max_digits=2, decimal_places=1)
+    user_name = models.CharField(max_length=20)
+    user_id = models.CharField(max_length=20)
+    user_avg = models.DecimalField(max_digits=2, decimal_places=1)
+    user_light = models.DecimalField(max_digits=2, decimal_places=1)
+    user_people = models.DecimalField(max_digits=2, decimal_places=1)
+    user_clear = models.DecimalField(max_digits=2, decimal_places=1)
+    date = models.CharField(max_length=30)
+    content = models.TextField(max_length=200)
+
+
+class Chrystie(models.Model) :
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
+    # light = models.DecimalField(max_digits=2, decimal_places=1)
+    # people = models.DecimalField(max_digits=2, decimal_places=1)
+    # clear = models.DecimalField(max_digits=2, decimal_places=1)
+    avg = models.DecimalField(max_digits=2, decimal_places=1)
+    user_name = models.CharField(max_length=20)
+    user_id = models.CharField(max_length=20)
+    user_avg = models.DecimalField(max_digits=2, decimal_places=1)
+    user_light = models.DecimalField(max_digits=2, decimal_places=1)
+    user_people = models.DecimalField(max_digits=2, decimal_places=1)
+    user_clear = models.DecimalField(max_digits=2, decimal_places=1)
+    date = models.CharField(max_length=30)
+    content = models.TextField(max_length=200)
