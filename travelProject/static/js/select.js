@@ -50,10 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// 검색창을 누르면 search.html로 이동하는 코드
+//검색창을 누르면 search.html로 이동하는 코드
 
-// var inputElement = document.querySelector('.search-bar');
-
-// inputElement.addEventListener('click', function() {
-//   window.location.href = 'search.html';
-// });
+//var inputElement = document.querySelector('.search-bar');
+//
+//inputElement.addEventListener('click', function() {
+//    window.location.href = 'search.html';
+//});

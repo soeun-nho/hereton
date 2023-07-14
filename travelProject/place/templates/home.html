@@ -5,18 +5,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/home.css' %}" />
     <title>홈</title>
 </head>
 
 <body>
-    {% if user.is_authenticated %}
-    <a href="{% url 'accounts:logout' %}"> {{ user.username }}님 로그아웃</a>
-    {% else %}
-    <a href="{% url 'accounts:join' %}">회원가입</a>
-    <a href="{% url 'accounts:login' %}">로그인</a>
-    {% endif %}
-
     <div class="search-container">
         <div class="search-bar-inner">
             <div class="input-wrapper">
@@ -51,7 +44,7 @@
             <p>업체 내 공간상태</p>
         </div>
         <div class="pl_station">
-            <img src="{% static 'images/pl_station_black.svg '%}" class="pl_station_icon" />
+            <img src="{% static 'images/pl_station_black.svg' %}" class="pl_station_icon" />
             <p>정류장까지의 거리</p>
         </div>
         <div class="pl_toilet">
@@ -83,6 +76,36 @@
             </filter>
         </defs>
     </svg>
+
+    <div class="logout">
+        <svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
+            <g filter="url(#filter0_d_273_2143)">
+                <a href="{% url 'accounts:logout' %}"></a>
+                <circle cx="31.5" cy="29.5" r="21.5" fill="white" />
+            </g>
+            <path
+                d="M31.5 20C31.716 20 31.9231 20.0858 32.0758 20.2385C32.2285 20.3912 32.3143 20.5983 32.3143 20.8143C32.3143 21.0302 32.2285 21.2374 32.0758 21.3901C31.9231 21.5428 31.716 21.6286 31.5 21.6286C29.4124 21.6286 27.4102 22.4579 25.9341 23.9341C24.4579 25.4102 23.6286 27.4124 23.6286 29.5C23.6286 31.5876 24.4579 33.5898 25.9341 35.0659C27.4102 36.5421 29.4124 37.3714 31.5 37.3714C31.716 37.3714 31.9231 37.4572 32.0758 37.6099C32.2285 37.7626 32.3143 37.9698 32.3143 38.1857C32.3143 38.4017 32.2285 38.6088 32.0758 38.7615C31.9231 38.9142 31.716 39 31.5 39C28.9804 39 26.5641 37.9991 24.7825 36.2175C23.0009 34.4359 22 32.0196 22 29.5C22 26.9804 23.0009 24.5641 24.7825 22.7825C26.5641 21.0009 28.9804 20 31.5 20Z"
+                fill="#202821" />
+            <path
+                d="M36.3531 26.8183C36.2093 26.6639 36.131 26.4598 36.1347 26.2488C36.1384 26.0378 36.2239 25.8366 36.3731 25.6874C36.5223 25.5382 36.7236 25.4527 36.9345 25.449C37.1455 25.4453 37.3496 25.5236 37.504 25.6674L40.7611 28.9246C40.9136 29.0773 40.9993 29.2842 40.9993 29.5C40.9993 29.7158 40.9136 29.9227 40.7611 30.0754L37.504 33.3326C37.4295 33.4126 37.3396 33.4767 37.2397 33.5212C37.1398 33.5658 37.032 33.5897 36.9226 33.5916C36.8133 33.5935 36.7047 33.5734 36.6033 33.5325C36.5019 33.4915 36.4098 33.4306 36.3325 33.3532C36.2551 33.2759 36.1942 33.1838 36.1532 33.0824C36.1123 32.981 36.0922 32.8724 36.0941 32.7631C36.096 32.6538 36.12 32.5459 36.1645 32.446C36.209 32.3462 36.2731 32.2563 36.3531 32.1817L38.2206 30.3143H29.3286C29.1126 30.3143 28.9055 30.2285 28.7528 30.0758C28.6001 29.9231 28.5143 29.716 28.5143 29.5C28.5143 29.284 28.6001 29.0769 28.7528 28.9242C28.9055 28.7715 29.1126 28.6857 29.3286 28.6857H38.2206L36.3531 26.8183Z"
+                fill="#202821" />
+            <defs>
+                <filter id="filter0_d_273_2143" x="0.444444" y="0.355555" width="62.1111" height="62.1111"
+                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha" />
+                    <feOffset dy="1.91111" />
+                    <feGaussianBlur stdDeviation="4.77778" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_273_2143" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_273_2143" result="shape" />
+                </filter>
+            </defs>
+        </svg>
+    </div>
+
     <div class="location">
         <svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
             <g filter="url(#filter0_d_74_149)">
@@ -120,10 +143,10 @@
     </div>
     <div class="pin"><img src="" class="score" /></div>
     <div id="map">
-        <img src="{% static 'images/map.png'%}" alt="지도 이미지" />
+        <img src=".{% static 'images/map.png' %}" alt="지도 이미지" />
     </div>
 
-    <script src="{% static 'js/home.js'%}"></script>
+    <script src="{% static 'js/home.js' %}"></script>
 </body>
 
 </html>

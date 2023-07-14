@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Review
+from .models import *
 # from .forms import ReviewForm
 
 # def review_new(request):
@@ -20,21 +20,9 @@ def home(request):
 def search(request):
     return render(request, 'search.html')
 
-# def select(request):
-#     if request.method =='POST':
-#         title = request.POST.get('title')
-#         Review.objects.create(
-#             title= title,
-#         )
-#         return redirect('select') #후기 페이지로
-#     else:
-#         title= request.GET.get('title')
-#     return render(request, 'select.html', {'title':title})
-
-def select(request):
-    review_list = Review.objects.all().order_by('-id')
-    context = {'review_list':review_list}
-    return render(request, "select.html", context)
+def select(request, id):
+    bowery = Bowery181.objects.get(id = id)
+    return render(request, 'select.html', {'bowery': bowery})
 
 
 def store_safety_comment(request):
