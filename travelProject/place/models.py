@@ -97,7 +97,6 @@ class Bowery68(models.Model) :
     date = models.DateTimeField(verbose_name="작성일", auto_now_add=True)
     content = models.TextField(max_length=500)
 
-
 class Chrystie(models.Model) :
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=100)

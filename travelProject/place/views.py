@@ -21,9 +21,10 @@ def search(request):
     return render(request, 'search.html')
 
 def select(request, id):
+    # bowery = Bowery181.objects.get(id = id)
+    # return render(request, 'select.html', {'bowery': bowery})
     bowery = Bowery181.objects.get(id = id)
-    return render(request, 'select.html', {'bowery': bowery})
-
+    return render(request,'select.html', {'bowery':bowery} )
 
 def store_safety_comment(request):
     return render(request, 'store-safety-comment.html')
