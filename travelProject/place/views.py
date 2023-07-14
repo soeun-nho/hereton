@@ -67,3 +67,19 @@ def detail_review(request,id):
     review = Review.objects.get(id=id)
     return render(request, 'detail_review.html', {'review':review})
 
+# def selectC(request, id):
+#     bowery = Bowery181.objects.get(id = id)
+#     return render(request,'selectC.html', {'bowery':bowery} )
+
+
+def select_a(request, id):
+    broom = Broome334.objects.get(id = id)
+    return render(request, 'select_a.html', {'broom': broom})
+
+def select_c(request, id):
+    ken = Kenmare.objects.get(id = id)
+    return render(request, 'select_c.html', {'ken': ken})
+
+def select_h(request, id):
+    che = Chrystie.objects.get(id = id)
+    return render(request, 'select_h.html', {'che': che})

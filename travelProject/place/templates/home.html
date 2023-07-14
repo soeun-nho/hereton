@@ -5,14 +5,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/home.css '%} " />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
     <title>홈</title>
-
 </head>
 
 <body>
     {% if user.is_authenticated %}
-    <a href="{% url 'accounts:logout' %}"> {{ user.username }}님 로그아웃</a>
     <div class="search-container">
         <div class="search-bar-inner">
             <div class="input-wrapper">
@@ -31,27 +29,27 @@
     </div>
     <div class="category">
         <div class="st_light">
-            <img src="{% static '/images/st_light_black.svg' %}" class="st_light_icon" />
+            <img src="{% static 'images/st_light_black.svg' %}" class="st_light_icon" />
             <p>주변이 밝은 거리</p>
         </div>
         <div class="st_people">
-            <img src="{% static '/images/st_people_black.svg' %}" class="st_people_icon" />
+            <img src="{% static 'images/st_people_black.svg'%}" class="st_people_icon" />
             <p>사람이 많은 거리</p>
         </div>
         <div class="st_clean">
-            <img src="{% static '/images/st_clean_black.svg'%}" class="st_clean_icon" />
+            <img src="{% static 'images/st_clean_black.svg'%}" class="st_clean_icon" />
             <p>정돈된 거리</p>
         </div>
         <div class="pl_clean">
-            <img src="{% static '/images/pl_clean_black.svg' %}" class="pl_clean_icon" />
+            <img src="{% static 'images/pl_clean_black.svg'%}" class="pl_clean_icon" />
             <p>업체 내 공간상태</p>
         </div>
         <div class="pl_station">
-            <img src="{% static '/images/pl_station_black.svg' %}" class="pl_station_icon" />
+            <img src="{% static 'images/pl_station_black.svg'%}" class="pl_station_icon" />
             <p>정류장까지의 거리</p>
         </div>
         <div class="pl_toilet">
-            <img src="{% static '/images/pl_toilet_black.svg' %}" class="pl_toilet_icon" />
+            <img src="{% static 'images/pl_toilet_black.svg'%}" class="pl_toilet_icon" />
             <p>업체 화장실 상태</p>
         </div>
     </div>
@@ -79,33 +77,6 @@
             </filter>
         </defs>
     </svg>
-    <div class="logout">
-        <svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
-            <g filter="url(#filter0_d_273_2143)">
-                <circle cx="31.5" cy="29.5" r="21.5" fill="white" />
-            </g>
-            <path
-                d="M31.5 20C31.716 20 31.9231 20.0858 32.0758 20.2385C32.2285 20.3912 32.3143 20.5983 32.3143 20.8143C32.3143 21.0302 32.2285 21.2374 32.0758 21.3901C31.9231 21.5428 31.716 21.6286 31.5 21.6286C29.4124 21.6286 27.4102 22.4579 25.9341 23.9341C24.4579 25.4102 23.6286 27.4124 23.6286 29.5C23.6286 31.5876 24.4579 33.5898 25.9341 35.0659C27.4102 36.5421 29.4124 37.3714 31.5 37.3714C31.716 37.3714 31.9231 37.4572 32.0758 37.6099C32.2285 37.7626 32.3143 37.9698 32.3143 38.1857C32.3143 38.4017 32.2285 38.6088 32.0758 38.7615C31.9231 38.9142 31.716 39 31.5 39C28.9804 39 26.5641 37.9991 24.7825 36.2175C23.0009 34.4359 22 32.0196 22 29.5C22 26.9804 23.0009 24.5641 24.7825 22.7825C26.5641 21.0009 28.9804 20 31.5 20Z"
-                fill="#202821" />
-            <path
-                d="M36.3531 26.8183C36.2093 26.6639 36.131 26.4598 36.1347 26.2488C36.1384 26.0378 36.2239 25.8366 36.3731 25.6874C36.5223 25.5382 36.7236 25.4527 36.9345 25.449C37.1455 25.4453 37.3496 25.5236 37.504 25.6674L40.7611 28.9246C40.9136 29.0773 40.9993 29.2842 40.9993 29.5C40.9993 29.7158 40.9136 29.9227 40.7611 30.0754L37.504 33.3326C37.4295 33.4126 37.3396 33.4767 37.2397 33.5212C37.1398 33.5658 37.032 33.5897 36.9226 33.5916C36.8133 33.5935 36.7047 33.5734 36.6033 33.5325C36.5019 33.4915 36.4098 33.4306 36.3325 33.3532C36.2551 33.2759 36.1942 33.1838 36.1532 33.0824C36.1123 32.981 36.0922 32.8724 36.0941 32.7631C36.096 32.6538 36.12 32.5459 36.1645 32.446C36.209 32.3462 36.2731 32.2563 36.3531 32.1817L38.2206 30.3143H29.3286C29.1126 30.3143 28.9055 30.2285 28.7528 30.0758C28.6001 29.9231 28.5143 29.716 28.5143 29.5C28.5143 29.284 28.6001 29.0769 28.7528 28.9242C28.9055 28.7715 29.1126 28.6857 29.3286 28.6857H38.2206L36.3531 26.8183Z"
-                fill="#202821" />
-            <defs>
-                <filter id="filter0_d_273_2143" x="0.444444" y="0.355555" width="62.1111" height="62.1111"
-                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha" />
-                    <feOffset dy="1.91111" />
-                    <feGaussianBlur stdDeviation="4.77778" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_273_2143" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_273_2143" result="shape" />
-                </filter>
-            </defs>
-        </svg>
-    </div>
     <div class="location">
         <svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
             <g filter="url(#filter0_d_74_149)">
@@ -141,17 +112,188 @@
             </defs>
         </svg>
     </div>
-    <div class="pin"><img src="" class="score" /></div>
+    <div class="pin-st">
+        <a href="select_a/1">
+            <img class="pin-st-a" src="{% static 'images/st_light 4.png' %}" style="
+                position: absolute;
+                left: 305.0824736156px;
+                top: 413.7242168886px;
+                z-index: -3;
+            " />
+        </a>
+
+        <img class="pin-st-b" src="{% static 'images/st_light 5.png' %}" style="
+                position: absolute;
+                left: 461.3877240698px;
+                top: 290.5138234898px;
+                z-index: -3;
+            " />
+        <a href="select_c/1">
+            <img class="pin-st-c" src="{% static './images/st_light 4.png' %}" style="
+                position: absolute;
+                left: 615.5494868542px;
+                top: 270.0273293456px;
+                z-index: -3;
+            " />
+        </a>
+
+        <img class="pin-st-d" src="{% static '/images/st_light 5.png' %}" style="
+                position: absolute;
+                left: 715.1139014675px;
+                top: 455.3231755362px;
+                z-index: -3;
+            " />
+        <img class="pin-st-e" src="{% static 'images/st_light 5.png' %}" style="
+                position: absolute;
+                left: 777.4776876854px;
+                top: 208.0424817312px;
+                z-index: -3;
+            " />
+        <img class="pin-st-f" src="{% static 'images/st_light 1.png' %}" style="
+                position: absolute;
+                left: 789.0844502154px;
+                top: 696.5635919488px;
+                z-index: -3;
+            " />
+        <img class="pin-st-g" src="{% static 'images/st_light 4.png'%}" style="
+                position: absolute;
+                left: 937.3042664288px;
+                top: 404.2536652858px;
+                z-index: -3;
+            " />
+        <a href="select_h/1">
+            <img class="pin-st-h" src="{% static 'images/st_light 3.png'%}" style="
+                position: absolute;
+                left: 1010.0490371992px;
+                top: 589.1922829804px;
+                z-index: -3;
+            " />
+        </a>
+
+        <img class="pin-st-i" src="{% static 'images/st_light 2.png'%}" style="
+                position: absolute;
+                left: 1005.3822560634px;
+                top: 288.0421315632px;
+                z-index: -3;
+            " />
+        <img class="pin-st-j" src="{% static 'images/st_light 1.png'%}" style="
+                position: absolute;
+                left: 1339.985661607px;
+                top: 514.6493160674px;
+                z-index: -3;
+            " />
+    </div>
+    <div class="pin-pl">
+        <img class="pin-pl-a" src="{% static './images/pl_clean 4.png'%}" style="
+                position: absolute;
+                left: 389.731029032px;
+                top: 209.282330631px;
+                z-index: -3;
+            " />
+        <img class="pin-pl-b" src="{% static 'images/pl_clean 5.png%'}" style="
+                position: absolute;
+                left: 513.508161528px;
+                top: 503.260271693px;
+                z-index: -3;
+            " />
+        <img class="pin-pl-c" src="{% static 'images/pl_clean 4.png'%}" style="
+                position: absolute;
+                left: 636.385343942px;
+                top: 131.110463788px;
+                z-index: -3;
+            " />
+        <img class="pin-pl-d" src="{% static 'images/pl_clean 5.png'%}" style="
+                position: absolute;
+                left: 670.810404411px;
+                top: 681.892695709px;
+                z-index: -3;
+            " />
+        <img class="pin-pl-e" src="{% static 'images/pl_clean 5.png'%}" style="
+                position: absolute;
+                left: 861.849081299px;
+                top: 522.236084098px;
+                z-index: -3;
+            " />
+        <img class="pin-pl-f" src="{% static 'images/pl_clean 1.png'%}" style="
+                position: absolute;
+                left: 889.169496944px;
+                top: 144.160903255px;
+                z-index: -3;
+            " />
+        <img class="pin-pl-g" src="{% static 'images/pl_clean 4.png'%}" style="
+                position: absolute;
+                left: 926.694590086px;
+                top: 585.065946127px;
+                z-index: -3;
+            " />
+        <img class="pin-pl-h" src="{% static 'images/pl_clean 3.png'%}" style="
+                position: absolute;
+                left: 983.102032013px;
+                top: 48.033873269px;
+                z-index: -3;
+            " />
+        <img class="pin-pl-i" src="{% static 'images/pl_clean 2.png'%}" style="
+                position: absolute;
+                left: 1006.607034083px;
+                top: 288.514277609px;
+                z-index: -3;
+            " />
+        <img class="pin-pl-j" src="{% static 'images/pl_clean 1.png'%}" style="
+                position: absolute;
+                left: 1405.072727354px;
+                top: 269.477359139px;
+                z-index: -3;
+            " />
+    </div>
 
     <div id="map">
-        <img src="{% static '/images/map.png'%}" alt="지도 이미지" />
+        <img src="{% static 'images/map.png'%}" alt="지도 이미지" />
     </div>
+    <a href="{% url 'accounts:logout' %}"> {{ user.username }}님 로그아웃</a>
     {% else %}
-
-    <a href="{% url 'accounts:join' %}" id="join_css">회원가입</a>
-    <a href="{% url 'accounts:login' %}" id="login_css">로그인</a>
+    <div class="home"
+        style="width: 390px; height: 844px; background-color: #1C1C1C; display: flex; flex-direction: column; align-items: center;">
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="68" height="30" viewBox="0 0 68 30" fill="none"
+            style="margin-top: 220px;">
+            <g clip-path="url(#clip0_297_2103)">
+                <path
+                    d="M20.6697 17.2568C21.5505 15.9632 21.9908 14.3944 21.9908 12.5779C21.9908 10.7614 21.5505 9.19258 20.6697 7.87148C19.789 6.55038 18.578 5.53203 16.9817 4.81644C15.3853 4.10084 13.4862 3.74304 11.3119 3.74304H2.25688C1.01835 3.74304 0 4.76139 0 5.99992V27.8807C0 29.0366 0.93578 29.9724 2.09174 29.9724H7.89908V21.3027H9.6055L13.4037 28.7889C13.789 29.532 14.5321 29.9999 15.3578 29.9999H22.4312L17.3119 20.0366C18.6881 19.3485 19.844 18.4678 20.6147 17.2843L20.6697 17.2568ZM13.211 10.5687C13.7339 11.0641 14.0092 11.7247 14.0092 12.5779C14.0092 13.4311 13.7339 14.0917 13.211 14.5871C12.6881 15.0825 11.8899 15.3302 10.789 15.3302H7.89908V9.82561H10.789C11.8899 9.82561 12.6881 10.0733 13.211 10.5687Z"
+                    fill="#8000FF" />
+                <path
+                    d="M25.321 10.734V28.2386C25.321 29.2294 26.1192 30 27.0825 30H32.7798V9.16516H26.8623C26.0091 9.16516 25.321 9.85324 25.321 10.7064V10.734Z"
+                    fill="#8000FF" />
+                <path
+                    d="M66.2754 12.3028C65.6424 11.1193 64.7892 10.2386 63.6883 9.68811C62.5874 9.13765 61.3763 8.8349 60.0002 8.8349C58.3213 8.8349 56.8626 9.24774 55.5965 10.101C54.991 10.5138 54.4406 11.0092 53.9727 11.5597C53.5874 10.9542 53.0919 10.4588 52.514 10.0734C51.3029 9.24774 49.8993 8.8349 48.3029 8.8349C46.8993 8.8349 45.6057 9.16517 44.4773 9.85325C44.0094 10.1285 43.5965 10.5138 43.1837 10.8991V9.16517H37.7617C36.8259 9.16517 36.0828 9.93582 36.0828 10.8441V28.1835C36.0828 29.1743 36.8809 29.9725 37.8718 29.9725H43.569V18.4129C43.569 17.5872 43.6791 16.9542 43.8718 16.4863C44.0919 16.0184 44.3672 15.6606 44.725 15.4404C45.0828 15.2202 45.4681 15.1101 45.9085 15.1101C46.5415 15.1101 47.0369 15.3578 47.3947 15.8257C47.7525 16.2936 47.9176 17.0918 47.9176 18.2202V28.3211C47.9176 29.2569 48.6607 30 49.5965 30H55.3763V18.4404C55.3763 17.6147 55.4864 16.9817 55.6791 16.5138C55.8993 16.0459 56.1745 15.6881 56.5323 15.4679C56.8901 15.2477 57.2754 15.1377 57.7158 15.1377C58.3213 15.1377 58.7892 15.3854 59.1745 15.8532C59.5598 16.3211 59.725 17.1193 59.725 18.2477V28.2386C59.725 29.2294 60.5231 30 61.4864 30H67.1837V16.9542C67.1837 15.0551 66.8809 13.5138 66.2479 12.3303L66.2754 12.3028Z"
+                    fill="#8000FF" />
+                <path
+                    d="M25.2935 3.77065C25.2935 3.24771 25.376 2.77982 25.5962 2.31193C25.7889 1.87156 26.0641 1.45872 26.3944 1.12844C26.7522 0.770646 27.1375 0.52294 27.6054 0.330279C28.0733 0.137619 28.5412 0.0275269 29.0641 0.0275269C29.587 0.0275269 30.0549 0.137619 30.5228 0.330279C30.9907 0.52294 31.376 0.798169 31.7338 1.12844C32.0641 1.48624 32.3393 1.87156 32.532 2.31193C32.7246 2.77982 32.8347 3.24771 32.8347 3.77065C32.8347 4.29358 32.7522 4.76147 32.532 5.22936C32.3393 5.69725 32.0641 6.08257 31.7338 6.44037C31.376 6.77065 30.9907 7.04588 30.5228 7.23854C30.0824 7.4312 29.587 7.54129 29.0641 7.54129C28.5412 7.54129 28.0733 7.45872 27.6054 7.23854C27.1375 7.01835 26.7522 6.77065 26.3944 6.44037C26.0641 6.08257 25.7889 5.69725 25.5962 5.22936C25.4036 4.78899 25.2935 4.29358 25.2935 3.77065Z"
+                    fill="#8000FF" />
+            </g>
+            <defs>
+                <clipPath id="clip0_297_2103">
+                    <rect width="67.211" height="30" fill="white" />
+                </clipPath>
+            </defs>
+        </svg>
+        <span class="logo_ment"
+            style="color: #FFF; text-align: center; font-family: Pretendard; font-size: 16px; font-style: normal; font-weight: 600; line-height: normal; letter-spacing: -0.16px; margin-top: 20px;">우리가
+            만들어나가는 안전 여행 울타리, 림</span>
+        <span class="logo_ment2"
+            style="color: #AEAEAE; text-align: center; font-family: Pretendard; font-size: 12px; font-style: normal; font-weight: 500; line-height: normal; margin-top: 14px;">평점부터,
+            정성 평가까지<br>여행 지역 치안 정보 공유의 모든것</span>
+        <a href="{% url 'accounts:login' %}">
+            <img class="login_btn" src="{% static 'images/login_btn1.svg'%}"
+                style="margin-top: 170px; width: 300px; height: 50px;">
+        </a>
+        <a href="{% url 'accounts:join' %}">
+            <img class="join_btn" src="{% static 'images/join1.png'%}" style="width: 277px; height: 50px;">
+        </a>
+    </div>
     {% endif %}
-    <script src="{% static '/js/home.js'%}"></script>
+
+
+
+    <script src="{% static 'js/home.js'%}"></script>
 </body>
 
 </html>
