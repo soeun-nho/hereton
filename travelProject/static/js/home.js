@@ -32,17 +32,17 @@ divs.forEach((div, index) => {
             changeImage(this.querySelector("img"));
 
             const score = parseFloat(this.querySelector("p").textContent);
-            let imagePath = "./image/st_light";
+            let imagePath = "../images/st_light";
             if (div.classList.contains("st_people")) {
-                imagePath = "./image/st_people";
+                imagePath = "../images/st_people";
             } else if (div.classList.contains("st_clean")) {
-                imagePath = "./image/st_clean";
+                imagePath = "../images/st_clean";
             } else if (div.classList.contains("pl_clean")) {
-                imagePath = "./image/pl_clean";
+                imagePath = "../images/pl_clean";
             } else if (div.classList.contains("pl_station")) {
-                imagePath = "./image/pl_station";
+                imagePath = "../images/pl_station";
             } else if (div.classList.contains("pl_toilet")) {
-                imagePath = "./image/pl_toilet";
+                imagePath = "../images/pl_toilet";
             }
 
             if (score >= 4.1) {
@@ -164,6 +164,7 @@ const nowElement = document.getElementById("now");
 locationDiv.addEventListener("click", function () {
     nowElement.scrollIntoView({ behavior: "smooth" });
 });
+
 //로그아웃 버튼 누르면 이동
 const logoutBtn = document.querySelector(".logout");
 
@@ -172,6 +173,7 @@ logoutBtn.addEventListener("click", handleLogout);
 function handleLogout() {
     window.location.href = "login.html";
 }
+
 //검색창 누르면 검색페이지로 이동
 const searchContainer = document.querySelector(".search-container");
 
